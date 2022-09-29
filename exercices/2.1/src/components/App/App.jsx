@@ -1,6 +1,6 @@
 import Button from "components/Button/Button";
 import Display from "components/Display/Display";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import useLocalStorage from "hooks/useLocalStorage";
 
 
 
