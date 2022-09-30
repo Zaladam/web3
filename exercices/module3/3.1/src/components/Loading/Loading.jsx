@@ -1,10 +1,11 @@
 import {useState} from "react";
+import Feedback from "../Feedback";
 
 const Loading = () => {
   const [loading,setLoading] = useState(true)
 setInterval(()=> setLoading(false)
 ,3000)
-  while(loading) {
+  if(loading) {
     return (
         <div>
           <p>Loading</p>
@@ -13,9 +14,7 @@ setInterval(()=> setLoading(false)
   }
 
   return(
-      <div>
-        <p>Feedback</p>
-      </div>
+      <Feedback/>
   )
 }
 export default Loading;
