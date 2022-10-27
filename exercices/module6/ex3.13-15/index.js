@@ -49,6 +49,35 @@ app.get("/api/persons", (request, response) => {
   Person.find({}).then(persons =>{ response.json(persons)})
 })
 
+app.post("/api/persons", (request, response) => {
+  const personPayload = request.body
+
+  const errorMessages = []
+  if (!personPayload.name) errorMessages.push("name must be present")
+  if (!personPayload.number) errorMessages.push("number must be present")
+
+  if (errorMessages.length > 0) {
+    response
+        .status(422)
+        .json({
+          errorMessages,
+        })
+    return
+  }
+
+
+  const newPerson = new Person({
+    name : personPayload.name,
+    number : personPayload.number
+  })
+
+  newPerson.save().then(savedPerson =>{
+    response.json(savedPerson)
+  })
+
+})
+
+
 /*
   app.get("/api/persons/:id", (request, response) => {
 
@@ -72,31 +101,5 @@ app.get("/api/persons", (request, response) => {
     response.status(204).end()
   })
 
-  app.post("/api/persons", (request, response) => {
-    const personPayload = request.body
-    const newId = Math.floor(Math.random() * 1e9)
-    const newPerson = {
-      ...personPayload,
-      id: newId,
-    }
 
-    const errorMessages = []
-    if (!personPayload.name) errorMessages.push("name must be present")
-    if (!personPayload.number) errorMessages.push("number must be present")
-    const nameExists = allPersons.some(person => person.name === newPerson.name)
-    if (nameExists) errorMessages.push("name must be unique")
-
-    if (errorMessages.length > 0) {
-      response
-        .status(422)
-        .json({
-          errorMessages,
-        })
-      return
-    }
-
-    // push not concat here. We want to mutate the array.
-    allPersons.push(newPerson)
-    response.json(newPerson)
-  })
 */
