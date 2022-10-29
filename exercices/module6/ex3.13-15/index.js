@@ -77,6 +77,13 @@ app.post("/api/persons", (request, response) => {
 
 })
 
+app.delete("/api/persons/:id", (request, response,next) => {
+  Person.findByIdAndDelete(request.params.id).then(result =>{
+    response.json(result).status(204).end()
+  })
+      .catch(error => next(error))
+
+})
 
 /*
   app.get("/api/persons/:id", (request, response) => {
@@ -91,15 +98,7 @@ app.post("/api/persons", (request, response) => {
     }
   })
 
-  app.delete("/api/persons/:id", (request, response) => {
-    const idParam = request.params.id
-    const id = Number(idParam)
-    const personIndex = allPersons.findIndex(person => person.id === id)
-    if (personIndex > -1) {
-      allPersons.splice(personIndex, 1) // We do NOT use delete because it creates a sparse array with a wrong length
-    }
-    response.status(204).end()
-  })
+
 
 
 */

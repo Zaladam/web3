@@ -1,0 +1,195 @@
+DELETE http://localhost:3001/api/persons/635d4b13d23f8aa77f628326
+Accept: application/json
+
+<> 2022-10-29T174739.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Johny Doe",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-29T174731.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/635d4aa9ad2e7753d2457da7
+Accept: application/json
+
+###
+
+DELETE http://localhost:3001/api/persons/42069
+Accept: application/json
+
+<> 2022-10-29T174601.500.html
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Johny Doe",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-29T174545.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/635aa6f249bb0f0187de7ace
+Accept: application/json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "99-99-9999"
+}
+
+<> 2022-10-27T174242.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-27T174232.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "99-99-9999"
+}
+
+<> 2022-10-27T174128.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "number": ""
+}
+
+<> 2022-10-27T174128-1.422.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-27T174128.422.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-27T173957.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-27T173752.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-27T173601.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2022-10-27T173556.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2022-10-27T173416.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "number": "12-34-567890123"
+}
+
+<> 2022-10-27T173336.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2022-10-27T171811.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2022-10-27T170333.200.json
+
+###
+
